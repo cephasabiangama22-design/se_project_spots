@@ -64,7 +64,7 @@
   color: rgba(33, 33, 33, 1);
 }
 
-.new__post {
+.profile__new-post-btn {
   display: flex;
   margin-left: auto;
   align-items: flex-end;
