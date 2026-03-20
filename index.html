@@ -9,7 +9,7 @@
     />
     <meta name="keywords" content="photos, photos of other users" />
     <meta name="author" content="Cephas abiangama" />
-    <link rel="stylesheet" href="/pages/index.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="favicon.ico" />
 
     <title>Spots Project</title>
@@ -17,7 +17,11 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="/images/Logo (1).svg" alt="spots logo" class="header__logo" />
+        <img
+          src="./images/Logo (1).svg"
+          alt="spots logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
@@ -37,14 +41,16 @@
               />Edit Profile
             </button>
           </div>
-          <button type="button" class="profile__add-btn">
-            <img
-              src="/images/Plus.svg"
-              alt="plus icon"
-              class="profile__plus-icon"
-            />
-            <span class="new-post">New Post</span>
-          </button>
+          <div class="new__post">
+            <button type="button" class="profile__add-btn">
+              <img
+                src="/images/Plus.svg"
+                alt="plus icon"
+                class="profile__plus-icon"
+              />
+              <span class="new-post">New Post</span>
+            </button>
+          </div>
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
