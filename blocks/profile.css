@@ -9,6 +9,7 @@
   width: 190px;
   margin-right: 20px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -38,6 +39,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  font-weight: 500;
 }
 
 .profile__edit-btn {
@@ -47,57 +49,60 @@
   text-align: center;
   display: flex;
   gap: 8px;
+  padding: 0;
   color: rgba(33, 33, 33, 1);
-  justify-content: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   cursor: pointer;
-  transition: color 0.3s;
+  opacity: 0.7;
 }
 .profile__edit-btn:hover {
-  color: gray;
+  opacity: 1;
 }
 
 .profile__pencil-icon {
   color: rgba(33, 33, 33, 1);
 }
 
-.profile__new-post-btn {
+.profile__new-post {
   display: flex;
-  margin-left: auto;
-  align-items: flex-end;
+  justify-content: end;
 }
 
 .profile__add-btn {
   margin-left: auto;
+  padding: 0;
   width: 149px;
   height: 52px;
   color: #fcf5e5;
   background-color: rgba(33, 33, 33, 1);
   border-radius: 8px;
-  border-radius: 8px;
+  border: none;
   display: flex;
-  justify-content: center;
   align-items: center;
+  align-self: end;
+  text-align: center;
   gap: 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   cursor: pointer;
-  transition: background-color 0.5s;
+  justify-content: center;
 }
 
 .profile__add-btn:hover {
-  background-color: gray;
+  opacity: 0.8;
+}
+
+.profile__new-post {
+  max-width: 7xpx;
 }
 
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
-    width: 288px;
+    max-width: 288px;
     align-items: center;
     text-align: center;
     padding-top: 20px;
@@ -128,7 +133,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    align-items: center;
   }
 
   .profile__add-btn {
@@ -137,6 +142,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    justify-content: center;
   }
 }

@@ -14,10 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 12px;
 }
 
 .card__like-btn {
-  background-image: url(../images/heart\ Icon.svg);
+  background-image: url(../images/like-icon-dark.svg);
   width: 23px;
   height: 20px;
   border: none;
@@ -32,7 +33,7 @@
 }
 
 .card__title {
-  margin: 12px 0 0;
+  margin: 0;
   color: rgba(33, 33, 33, 1);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -46,10 +47,6 @@
 }
 
 @media screen and (max-width: 627px) {
-  .card {
-    padding: 20px 0 20px;
-  }
-
   .card__image {
     height: 288px;
     width: 288px;
@@ -57,14 +54,6 @@
 
   .card__title {
     max-width: 235px;
-    margin: 12px 0 0;
-  }
-
-  .card__content {
-    width: 288px;
-    font-weight: 500;
     font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
   }
 }
