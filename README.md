@@ -35,3 +35,7 @@ This project is made so all the elements are displayed correctly on popular scre
 ## Project Pitch Video
 
 [Loomm video](loom.com/share/4a728cb8f821431a84dee6ac15da1152)
+
+## deployment link
+
+https://cephasabiangama22-design.github.io/se_project_spots/
