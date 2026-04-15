@@ -55,7 +55,7 @@
 .modal__input {
   width: 100%;
   border-radius: 8px;
-  margin: 8px 0 0;
+  margin: 8px 0 32px;
   padding: 16px 12px;
   border-color: #21212166;
   font-weight: 500;
