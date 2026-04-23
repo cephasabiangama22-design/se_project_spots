@@ -73,7 +73,7 @@
 .profile__add-btn {
   margin-left: auto;
   padding: 0;
-  width: 149px;
+  width: 156px;
   height: 52px;
   color: #fcf5e5;
   background-color: rgba(33, 33, 33, 1);
@@ -93,10 +93,6 @@
 
 .profile__add-btn:hover {
   opacity: 0.8;
-}
-
-.profile__new-post {
-  max-width: 7xpx;
 }
 
 @media screen and (max-width: 627px) {

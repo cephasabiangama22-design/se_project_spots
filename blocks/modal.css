@@ -11,14 +11,20 @@
   align-items: center;
   padding: 10px;
   opacity: 0;
+  pointer-events: none;
   transform: scale(0.8);
-  transition: all 0.5s ease;
+  transition:
+    opacity 0.8s,
+    visibility 0s 0.8s;
 }
 
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
-  transform: scale(1);
+  pointer-events: auto;
+  transition:
+    opacity 0.8s,
+    visibility 0s;
 }
 .modal__container {
   max-width: 730px;
@@ -27,6 +33,7 @@
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
@@ -38,6 +45,12 @@
   background-color: transparent;
   border: none;
   color: #212121;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  background-color: #fff;
+  opacity: 0;
 }
 
 .modal__title {
@@ -63,10 +76,10 @@
   padding: 16px 12px;
   border-color: #21212166;
   font-weight: 500;
-  font-style: Medium;
   font-size: 20px;
   line-height: 100%;
   box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.4);
 }
 
 .modal__input::placeholder {
@@ -82,12 +95,16 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
+  cursor: pointer;
+  border: none;
+}
+.modal__submit-btn:hover {
+  background-color: #fcf5e5;
 }
 
 @media screen and (max-width: 627px) {
   .modal__close-btn {
     top: 4.49px;
-    border: 2px;
     align-items: center;
     margin: 10px 0 24px;
   }
@@ -108,6 +125,7 @@
     max-width: none;
     padding: 18px 118px;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .modal__input {
@@ -120,7 +138,6 @@
   }
   .modal__label {
     font-weight: 500;
-    font-style: Medium;
     font-size: 16px;
   }
 }
