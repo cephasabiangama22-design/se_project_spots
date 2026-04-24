@@ -28,7 +28,7 @@ editProfileBtn.addEventListener("click", function () {
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
 });
 editProfileCloseBtn.addEventListener("click", function () {
-  closeModal(editProfileBtn);
+  closeModal(editProfileModal);
 });
 
 newPostBtn.addEventListener("click", function () {
@@ -62,6 +62,7 @@ function handlenewPostSubmit(evt) {
   closeModal(newPostModal);
   console.log(newPostImageLinkInput.value);
   console.log(newPostCaptionTypeInput.value);
+  newPostForm.requestFullscreen();
 }
 
 newPostForm.addEventListener("submit", handlenewPostSubmit);
