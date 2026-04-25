@@ -62,7 +62,7 @@ function handlenewPostSubmit(evt) {
   closeModal(newPostModal);
   console.log(newPostImageLinkInput.value);
   console.log(newPostCaptionTypeInput.value);
-  newPostForm.requestFullscreen();
+  newPostForm.reset();
 }
 
 newPostForm.addEventListener("submit", handlenewPostSubmit);
