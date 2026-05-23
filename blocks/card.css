@@ -1,5 +1,29 @@
 .card {
   width: 100%;
+  position: relative;
+}
+
+.card__delete-btn {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.card__delete-btn:hover {
+  background-image: url(../images/State=Hover-delete-btn.svg);
+  opacity: 0.6;
+}
+
+.delete__icon {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
 .card__image {
@@ -27,9 +51,17 @@
   cursor: pointer;
   transition: opacity 0.2s;
 }
-
 .card__like-btn:hover {
   opacity: 1;
+}
+
+.card__like-btn_active {
+  background-image: url(../images/Union-liked-active-icon.svg);
+  opacity: 1;
+}
+
+.card__like-btn_active:hover {
+  opacity: 0.4;
 }
 
 .card__title {
