@@ -20,7 +20,7 @@
   opacity: 0.6;
 }
 
-.delete__icon-btn {
+.card__delete-icon {
   width: 32px;
   height: 32px;
   display: block;
