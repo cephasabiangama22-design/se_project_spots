@@ -136,7 +136,7 @@ function handleNewPostSubmit(evt) {
 
   const cardElement = getCardElement({
     name: newPostCaptionTypeInput.value,
-    link: newPostImagelinkInput.value,
+    link: newPostImageLinkInput.value,
   });
   cardsList.prepend(cardElement);
   newPostForm.reset();

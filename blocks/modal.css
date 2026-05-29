@@ -135,6 +135,7 @@
 @media screen and (max-width: 627px) {
   .modal__close-btn {
     top: 4.49px;
+    right: 4.49px;
     align-items: center;
     margin: 10px 0 24px;
   }
