@@ -47,7 +47,7 @@
             <span class="profile__new-post">New Post</span>
           </button>
         </section>
-        <section class="cards page__section">
+        <section id="card-section" class="cards page__section">
           <ul class="cards__list">
             <template id="card-template"
               ><li class="card">
@@ -81,7 +81,7 @@
             />
           </button>
           <h2 class="modal__title">Edit profile</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label"
               >Name
               <input
@@ -89,7 +89,11 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                minlength="2"
+                maxlength="40"
+                required
               />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label"
               >Description
@@ -98,9 +102,21 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                minlength="2"
+                maxlength="200"
+                required
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button
+              type="submit"
+              class="modal__submit-btn modal__submit-btn_disabled"
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
@@ -115,7 +131,7 @@
           </button>
           <h2 class="modal__title">New post</h2>
 
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label"
               >Image link
               <input
@@ -123,7 +139,9 @@
                 type="url"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
+              <span id="card-image-input-error" class="modal__error"></span>
             </label>
             <label for="caption-type-input" class="modal__label"
               >Caption
@@ -132,7 +150,11 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                minlength="2"
+                maxlength="30"
+                required
               />
+              <span id="caption-type-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -156,6 +178,7 @@
         <p class="modal__title modal__title_preview"></p>
       </div>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

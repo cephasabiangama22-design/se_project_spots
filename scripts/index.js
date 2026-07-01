@@ -44,6 +44,7 @@ const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const newPostImageLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionTypeInput = newPostModal.querySelector(
   "#caption-type-input",
@@ -59,11 +60,11 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
-
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
+
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
@@ -140,6 +141,7 @@ function handleNewPostSubmit(evt) {
   });
   cardsList.prepend(cardElement);
   newPostForm.reset();
+  disabledButton(newPostSubmitBtn);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
