@@ -7,23 +7,25 @@ const settings = {
   errorClass: "modal__error_visible",
 };
 
-const showInputError = (formEl, inputEl, errorMsg) => {
+const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
-  inputEl.classList.add("modal__input_type_error");
+  inputEl.classList.add(config.inputErrorClass);
   errorMsgEl.textContent = errorMsg;
+  errorMsgEl.classList.add(config.errorClass);
 };
 
-const hideInputError = (formEl, inputEl) => {
+const hideInputError = (formEl, inputEl, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
-  inputEl.classList.remove("modal__input_type_error");
+  inputEl.classList.remove(config.inputErrorClass);
   errorMsgEl.textContent = "";
+  errorMsgEl.classList.remove(config.errorClass);
 };
 
-const checkInputValidity = (formEl, inputEl) => {
+const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, inputEl.validationMessage);
+    showInputError(formEl, inputEl, inputEl.validationMessage, config);
   } else {
-    hideInputError(formEl, inputEl);
+    hideInputError(formEl, inputEl, config);
   }
 };
 const hasInvalidInput = (inputList) => {
@@ -32,18 +34,18 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl) => {
-  if (hasInvalidInput(inputList)) {
-    disabledButton(buttonEl);
-  } else {
-    buttonEl.disabled = false;
-    buttonEl.classList.remove("modal__submit-btn_disabled");
-  }
+const disabledButton = (buttonEl, config) => {
+  buttonEl.disabled = true;
+  buttonEl.classList.add(config.inactiveButtonClass);
 };
 
-const disabledButton = (buttonEl) => {
-  buttonEl.disabled = true;
-  buttonEl.classList.add("modal__submit-btn_disabled");
+const toggleButtonState = (inputList, buttonEl, config) => {
+  if (hasInvalidInput(inputList)) {
+    disabledButton(buttonEl, config);
+  } else {
+    buttonEl.disabled = false;
+    buttonEl.classList.remove(config.inactiveButtonClass);
+  }
 };
 
 const setEventListeners = (formEl, config) => {

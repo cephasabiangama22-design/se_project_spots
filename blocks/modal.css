@@ -96,6 +96,7 @@
 }
 
 .modal__error {
+  visibility: hidden;
   display: block;
   margin-top: 8px;
   color: red;
@@ -103,6 +104,10 @@
   font-style: Medium;
   font-size: 16px;
   line-height: 110.00000000000001%;
+}
+
+.modal__error_visible {
+  visibility: visible;
 }
 
 .modal__submit-btn {
@@ -197,9 +202,7 @@
     font-weight: 500;
     font-size: 16px;
   }
-}
 
-@media screen and (max-width: 627px) {
   .modal__image {
     max-width: unset;
   }
