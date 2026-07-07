@@ -47,6 +47,13 @@ const toggleButtonState = (inputList, buttonEl, config) => {
     buttonEl.classList.remove(config.inactiveButtonClass);
   }
 };
+const resetValidation = (formEl, inputList, config) => {
+  inputList.forEach((inputEl) => {
+    hideInputError(formEl, inputEl, config);
+  });
+  const buttonEl = formEl.querySelector(config.submitButtonSelector);
+  toggleButtonState(inputList, buttonEl, config);
+};
 
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
@@ -70,3 +77,4 @@ const enableValidation = (config) => {
 };
 
 enableValidation(settings);
+export { settings, enableValidation, resetValidation, disabledButton };

@@ -1,3 +1,5 @@
+import { settings, resetValidation, disabledButton } from "./validation.js";
+
 const initialCards = [
   {
     name: "Golden Gate bridge",
@@ -84,7 +86,6 @@ function getCardElement(data) {
 
   cardDeleteBtn.addEventListener("click", () => {
     cardElement.remove();
-    cardDeleteBtn.classList.toggle("card__delete-btn_active");
   });
 
   cardImageEl.src = data.link;
@@ -96,9 +97,15 @@ function getCardElement(data) {
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+
+  const inputList = Array.from(
+    editProfileForm.querySelectorAll(settings.inputSelector),
+  );
+
+  resetValidation(editProfileForm, inputList, settings);
 
   openModal(editProfileModal);
-  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
 });
 editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
@@ -150,7 +157,7 @@ function handleNewPostSubmit(evt) {
   });
   cardsList.prepend(cardElement);
   newPostForm.reset();
-  disabledButton(newPostSubmitBtn);
+  disabledButton(newPostSubmitBtn, settings);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
