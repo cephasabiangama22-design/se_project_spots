@@ -99,9 +99,7 @@ editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
 
-  const inputList = Array.from(
-    editProfileForm.querySelectorAll(settings.inputSelector),
-  );
+  const inputList = [editProfileNameInput, editProfileDescriptionInput];
 
   resetValidation(editProfileForm, inputList, settings);
 
