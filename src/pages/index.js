@@ -1,4 +1,11 @@
-import { settings, resetValidation, disabledButton } from "./validation.js";
+import "./index.css";
+
+import {
+  settings,
+  enableValidation,
+  resetValidation,
+  disabledButton,
+} from "./validation.js";
 
 const initialCards = [
   {
@@ -176,3 +183,4 @@ initialCards.forEach(function (item) {
 modalCloseBtnPreview.addEventListener("click", () => {
   closeModal(previewModal);
 });
+enableValidation(settings);
