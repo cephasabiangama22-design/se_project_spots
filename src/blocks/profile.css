@@ -67,7 +67,7 @@
 
 .profile__new-post {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .profile__add-btn {
