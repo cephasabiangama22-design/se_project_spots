@@ -36,10 +36,18 @@ This project is made so all the elements are displayed correctly on popular scre
 
 [Loomm video](loom.com/share/4a728cb8f821431a84dee6ac15da1152)
 
+loom Video final project(https://www.loom.com/share/8a935ab55ce940d1a312a3cdb6d08fa0)
+
 ## Project pitch Video Spots Stage 9
 
 https://www.loom.com/share/b5287b3303164dd6969e5ef3223fa520
 
+## final Project
+
+https://www.loom.com/share/8a935ab55ce940d1a312a3cdb6d08fa0
+
 ## deployment link
 
 https://cephasabiangama22-design.github.io/se_project_spots/
+
+## final project deployment link
