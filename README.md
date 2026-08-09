@@ -51,3 +51,5 @@ https://www.loom.com/share/8a935ab55ce940d1a312a3cdb6d08fa0
 https://cephasabiangama22-design.github.io/se_project_spots/
 
 ## final project deployment link
+
+https://github.com/cephasabiangama22-design/se_project_spots/tree/spots-final
