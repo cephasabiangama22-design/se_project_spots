@@ -68,7 +68,7 @@ const editprofileAvatarCloseBtn =
   avatarModalEl.querySelector(".modal__close-btn");
 const avatarInput = avatarModalEl.querySelector("#avatar-input");
 const avatarForm = avatarModalEl.querySelector(".modal__form");
-const avatarsubmitabtn = avatarModalEl.querySelector(".modal__submit-btn");
+const avatarSubmitBtn = avatarModalEl.querySelector(".modal__submit-btn");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
