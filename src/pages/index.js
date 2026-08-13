@@ -59,12 +59,12 @@ const deleteSubmitBtn = deleteForm.querySelector(".modal__delete-btn");
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
-const ProfileAvatar = document.querySelector(".profile__avatar");
+const profileAvatar = document.querySelector(".profile__avatar");
 const profileAvatarBtn = document.querySelector(".profile__avatar-btn");
 
 //Profile Avatar form
 const avatarModalEl = document.querySelector("#avatar-modal");
-const editProfileAvatarCloseBtn =
+const editprofileAvatarCloseBtn =
   avatarModalEl.querySelector(".modal__close-btn");
 const avatarInput = avatarModalEl.querySelector("#avatar-input");
 const avatarForm = avatarModalEl.querySelector(".modal__form");
@@ -81,7 +81,7 @@ api
     console.log(cards);
     profileNameEl.textContent = userInfo.name;
     profileDescriptionEl.textContent = userInfo.about;
-    ProfileAvatar.src = userInfo.avatar;
+    profileAvatar.src = userInfo.avatar;
 
     cards.forEach(function (item) {
       const cardElement = getCardElement(item);
@@ -163,7 +163,7 @@ profileAvatarBtn.addEventListener("click", function () {
   openModal(avatarModalEl);
 });
 
-editProfileAvatarCloseBtn.addEventListener("click", function () {
+editprofileAvatarCloseBtn.addEventListener("click", function () {
   closeModal(avatarModalEl);
 });
 
@@ -231,10 +231,10 @@ function handleEditProfileSubmit(evt) {
 
       closeModal(editProfileModal);
     })
-    .catch(console.error);
-  console.log("submitting").finally(() => {
-    editProfileSubmitBtn.textContent = defaultText;
-  });
+    .catch(console.error)
+    .finally(() => {
+      editProfileSubmitBtn.textContent = defaultText;
+    });
 }
 
 avatarForm.addEventListener("submit", handleEditAvatarSubmit);
@@ -247,7 +247,7 @@ function handleEditAvatarSubmit(evt) {
   api
     .editAvatar(avatarInput.value)
     .then((data) => {
-      ProfileAvatar.src = data.avatar;
+      profileAvatar.src = data.avatar;
       closeModal(avatarModalEl);
     })
     .catch(console.error)
